@@ -1,0 +1,77 @@
+
+ # --- Flight Option 1 ---
+Flight ID: 1
+Price: 1140.42 USD
+Duration: 12h 0m + 11h 35m
+Airlines/Flights: AF3, AF1104, AF1567, AF10
+Aircraft: 77W, 319, 321
+Cabin: ECONOMY
+Baggage: Checked: 0, Cabin: 1
+ ## Itinerary:
+  ### --- Outbound (12h 0m) ---
+    • JFK (T1) 2025-07-01 17:30 → CDG (T2E) 2025-07-02 06:55 | AF3 | 7h 25m
+    Layover: 2h 30m
+    • CDG (T2F) 2025-07-02 09:25 → FCO (T1) 2025-07-02 11:30 | AF1104 | 2h 5m
+
+  ### --- Return (11h 35m) ---
+    • FLR 2025-07-07 15:20 → CDG (T2F) 2025-07-07 17:05 | AF1567 | 1h 45m
+    Layover: 1h 25m
+    • CDG (T2E) 2025-07-07 18:30 → JFK (T1) 2025-07-07 20:55 | AF10 | 8h 25m
+
+ # --- Flight Option 2 ---
+Flight ID: 2
+Price: 1140.42 USD
+Duration: 12h 0m + 11h 40m
+Airlines/Flights: AF3, AF1104, AF1267, AF4
+Aircraft: 318, 77W, 321
+Cabin: ECONOMY
+Baggage: Checked: 0, Cabin: 1
+ ## Itinerary:
+  ### --- Outbound (12h 0m) ---
+    • JFK (T1) 2025-07-01 17:30 → CDG (T2E) 2025-07-02 06:55 | AF3 | 7h 25m
+    Layover: 2h 30m
+    • CDG (T2F) 2025-07-02 09:25 → FCO (T1) 2025-07-02 11:30 | AF1104 | 2h 5m
+
+  ### --- Return (11h 40m) ---
+    • FLR 2025-07-07 07:00 → CDG (T2F) 2025-07-07 08:50 | AF1267 | 1h 50m
+    Layover: 1h 40m
+    • CDG (T2E) 2025-07-07 10:30 → JFK (T1) 2025-07-07 12:40 | AF4 | 8h 10m
+
+ # --- Flight Option 3 ---
+Flight ID: 3
+Price: 1140.42 USD
+Duration: 12h 0m + 11h 50m
+Airlines/Flights: AF3, AF1104, AF1067, AF6
+Aircraft: 77W, 319, 321
+Cabin: ECONOMY
+Baggage: Checked: 0, Cabin: 1
+ ## Itinerary:
+  ### --- Outbound (12h 0m) ---
+    • JFK (T1) 2025-07-01 17:30 → CDG (T2E) 2025-07-02 06:55 | AF3 | 7h 25m
+    Layover: 2h 30m
+    • CDG (T2F) 2025-07-02 09:25 → FCO (T1) 2025-07-02 11:30 | AF1104 | 2h 5m
+
+  ### --- Return (11h 50m) ---
+    • FLR 2025-07-07 09:55 → CDG (T2F) 2025-07-07 11:45 | AF1067 | 1h 50m
+    Layover: 1h 45m
+    • CDG (T2E) 2025-07-07 13:30 → JFK (T1) 2025-07-07 15:45 | AF6 | 8h 15m
+
+ # --- Flight Option 4 ---
+Flight ID: 4
+Price: 1140.42 USD
+Duration: 12h 0m + 12h 30m
+Airlines/Flights: AF3, AF1104, AF1367, AF8
+Aircraft: 77W, 223, 321
+Cabin: ECONOMY
+Baggage: Checked: 0, Cabin: 1
+ ## Itinerary:
+  ### --- Outbound (12h 0m) ---
+    • JFK (T1) 2025-07-01 17:30 → CDG (T2E) 2025-07-02 06:55 | AF3 | 7h 25m
+    Layover: 2h 30m
+    • CDG (T2F) 2025-07-02 09:25 → FCO (T1) 2025-07-02 11:30 | AF1104 | 2h 5m
+
+  ### --- Return (12h 30m) ---
+    • FLR 2025-07-07 12:15 → CDG (T2F) 2025-07-07 14:05 | AF1367 | 1h 50m
+    Layover: 2h 25m
+    • CDG (T2E) 2025-07-07 16:30 → JFK (T1) 2025-07-07 18:45 | AF8 | 8h 15m
+
