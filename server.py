@@ -45,19 +45,29 @@ def search_hotels(city_codes_str: str, orig_date: str, dest_dates_str: str, adul
 
 @mcp.tool
 def create_trip_pdf(
+    infants: int,
+    children: int,
+    adults: int,
     orig_city: str,
     orig_date: str,
     dest_cities: str,
     dest_dates: str,
+    local_transport: str,
+    city_transport: str,
     flight: str,
     hotels: str,
     itinerary: str
 ):
     return _create_trip_pdf(
+        infants=infants,
+        children=children,
+        adults=adults,
         orig_city=orig_city,
         orig_date=orig_date,
         dest_cities=dest_cities,
         dest_dates=dest_dates,
+        local_transport=local_transport,
+        city_transport=city_transport,
         flight=flight,
         hotels=hotels,
         itinerary=itinerary
