@@ -298,6 +298,8 @@ def search_flights(orig_location_code: str, dest_location_code: str, dest2_locat
                 'searchCriteria': {'maxFlightOffers': 4}
             }
     try:
+        print("Request body:")
+        print(json.dumps(body, indent=2))
         response = amadeus.shopping.flight_offers_search.post(body)
         # with open('test.json', 'w') as f:
         #     f.write(response.data)
@@ -307,10 +309,13 @@ def search_flights(orig_location_code: str, dest_location_code: str, dest2_locat
         # return flight_offers
         return flight_summary(parse_flight_data(response.data))
     except ResponseError as error:
+        print("Amadeus error:", error)
+        if hasattr(error, 'response') and hasattr(error.response, 'body'):
+            print("Error body:", error.response.body)
         raise error
     
 if __name__ == "__main__":
-    print(search_flights('LAX', 'TPE', 'TPE', '2025-07-01', '2025-07-07', 0, 0, 2))
+    print(search_flights('LAX', 'TPE', 'TPE', '2025-08-01', '2025-08-07', 0, 0, 2))
     # pfd = parse_flight_data(search_flights('NYC', 'LON', 'LON', '2025-07-01', '2025-07-08', 0, 1, 2))
     # print(flight_summary(pfd))
     # with open('test.json', 'w') as f:

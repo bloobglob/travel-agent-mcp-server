@@ -1,0 +1,312 @@
+app:
+  description: ''
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  mode: advanced-chat
+  name: temp
+  use_icon_as_answer_icon: false
+dependencies: []
+kind: app
+version: 0.3.0
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      allowed_file_extensions:
+      - .JPG
+      - .JPEG
+      - .PNG
+      - .GIF
+      - .WEBP
+      - .SVG
+      allowed_file_types:
+      - image
+      allowed_file_upload_methods:
+      - local_file
+      - remote_url
+      enabled: false
+      fileUploadConfig:
+        audio_file_size_limit: 50
+        batch_count_limit: 5
+        file_size_limit: 15
+        image_file_size_limit: 10
+        video_file_size_limit: 100
+        workflow_file_upload_limit: 10
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 3
+    opening_statement: ''
+    retriever_resource:
+      enabled: true
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        sourceType: start
+        targetType: llm
+      id: 1751496122001-llm
+      source: '1751496122001'
+      sourceHandle: source
+      target: llm
+      targetHandle: target
+      type: custom
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: tool
+      id: llm-source-1751496130732-target
+      source: llm
+      sourceHandle: source
+      target: '1751496130732'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        desc: ''
+        selected: false
+        title: Start
+        type: start
+        variables: []
+      height: 54
+      id: '1751496122001'
+      position:
+        x: 80
+        y: 282
+      positionAbsolute:
+        x: 80
+        y: 282
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        memory:
+          query_prompt_template: '{{#sys.query#}}'
+          window:
+            enabled: false
+            size: 10
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: ''
+          provider: ''
+        prompt_template:
+        - role: system
+          text: ''
+        selected: false
+        title: LLM
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 54
+      id: llm
+      position:
+        x: 380
+        y: 282
+      positionAbsolute:
+        x: 380
+        y: 282
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        is_team_authorization: true
+        output_schema: null
+        paramSchemas:
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Client must accept both application/json and text/event-stream
+            ja_JP: Client must accept both application/json and text/event-stream
+            pt_BR: Client must accept both application/json and text/event-stream
+            zh_Hans: Client must accept both application/json and text/event-stream
+          label:
+            en_US: Accept
+            ja_JP: Accept
+            pt_BR: Accept
+            zh_Hans: Accept
+          llm_description: Client must accept both application/json and text/event-stream
+          max: null
+          min: null
+          name: Accept
+          options: []
+          placeholder:
+            en_US: Client must accept both application/json and text/event-stream
+            ja_JP: Client must accept both application/json and text/event-stream
+            pt_BR: Client must accept both application/json and text/event-stream
+            zh_Hans: Client must accept both application/json and text/event-stream
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          label:
+            en_US: jsonrpc
+            ja_JP: jsonrpc
+            pt_BR: jsonrpc
+            zh_Hans: jsonrpc
+          llm_description: ''
+          max: null
+          min: null
+          name: jsonrpc
+          options: []
+          placeholder:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          label:
+            en_US: id
+            ja_JP: id
+            pt_BR: id
+            zh_Hans: id
+          llm_description: ''
+          max: null
+          min: null
+          name: id
+          options: []
+          placeholder:
+            en_US: ''
+            ja_JP: ''
+            pt_BR: ''
+            zh_Hans: ''
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: number
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Method to execute
+            ja_JP: Method to execute
+            pt_BR: Method to execute
+            zh_Hans: Method to execute
+          label:
+            en_US: method
+            ja_JP: method
+            pt_BR: method
+            zh_Hans: method
+          llm_description: Method to execute
+          max: null
+          min: null
+          name: method
+          options: []
+          placeholder:
+            en_US: Method to execute
+            ja_JP: Method to execute
+            pt_BR: Method to execute
+            zh_Hans: Method to execute
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Parameters for the method
+            ja_JP: Parameters for the method
+            pt_BR: Parameters for the method
+            zh_Hans: Parameters for the method
+          label:
+            en_US: params
+            ja_JP: params
+            pt_BR: params
+            zh_Hans: params
+          llm_description: Parameters for the method
+          max: null
+          min: null
+          name: params
+          options: []
+          placeholder:
+            en_US: Parameters for the method
+            ja_JP: Parameters for the method
+            pt_BR: Parameters for the method
+            zh_Hans: Parameters for the method
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        params:
+          Accept: ''
+          id: ''
+          jsonrpc: ''
+          method: ''
+          params: ''
+        provider_id: 213d214b-eede-4f86-b3d3-13ac651087ca
+        provider_name: Call MCP Tool
+        provider_type: api
+        selected: true
+        title: callTool
+        tool_configurations: {}
+        tool_description: Call MCP Tool
+        tool_label: callTool
+        tool_name: callTool
+        tool_parameters: {}
+        type: tool
+      height: 54
+      id: '1751496130732'
+      position:
+        x: 681
+        y: 282
+      positionAbsolute:
+        x: 681
+        y: 282
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    viewport:
+      x: 0
+      y: 0
+      zoom: 1
